@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>514</width>
+    <height>461</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Evolutuon Simulation</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../res/DNA.png</normaloff>../res/DNA.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="MainStackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>515</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="ParamterPage">
+     <widget class="QWidget" name="formLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>122</y>
+        <width>258</width>
+        <height>136</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Initial bugs</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="InitBugNumberSpinBox">
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Initial bacteria</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="InitBacteriumNumberSpinBox">
+         <property name="maximum">
+          <number>10000</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Eden size</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="EdenRadiusSpinBox">
+         <property name="maximum">
+          <number>200</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>new bacteria/step</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QDoubleSpinBox" name="IncreaseBacteriumEachForPoolDoubleSpinBox">
+         <property name="maximum">
+          <double>999999.989999999990687</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>new bacteria/step for Eden</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QDoubleSpinBox" name="IncreaseBacteriumEachForEdenDoubleSpinBox">
+         <property name="maximum">
+          <double>999999.989999999990687</double>
+         </property>
+         <property name="value">
+          <double>99.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>197</x>
+        <y>270</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Start!</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="DisplayPage">
+     <widget class="QFrame" name="displayFrame">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>512</width>
+        <height>384</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>512</width>
+        <height>384</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>512</width>
+        <height>384</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>24</x>
+        <y>396</y>
+        <width>220</width>
+        <height>46</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Speed</string>
+      </property>
+      <widget class="QSlider" name="speedSlider">
+       <property name="geometry">
+        <rect>
+         <x>34</x>
+         <y>16</y>
+         <width>163</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>4</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBothSides</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="ExitPushButton">
+      <property name="geometry">
+       <rect>
+        <x>432</x>
+        <y>406</y>
+        <width>59</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Exit</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>EdenRadiusSpinBox</tabstop>
+  <tabstop>IncreaseBacteriumEachForPoolDoubleSpinBox</tabstop>
+  <tabstop>InitBacteriumNumberSpinBox</tabstop>
+  <tabstop>speedSlider</tabstop>
+  <tabstop>InitBugNumberSpinBox</tabstop>
+  <tabstop>IncreaseBacteriumEachForEdenDoubleSpinBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+ <slots>
+  <slot>speedChanged()</slot>
+ </slots>
+</ui>
