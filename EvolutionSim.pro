@@ -22,3 +22,5 @@ FORMS   += \
     src/mainwindow.ui
 
 RESOURCES +=
+
+CONFIG += c++11
